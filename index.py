@@ -95,7 +95,7 @@ while True: #while para o jogador escolher se quer jogar ou não
   if play == "SIM": 
 
     criar_tabuleiro(tabuleiro_original) # cria o tabuleiro com tudo escondido
-
+    tabuleiro_modificado = tabuleiro_original
     aleatoriar_simbolos(linha1, linha2, linha3, linha4, linha5, linha6, linhas) # deixa aleatório os simbolos
 
     while True: # while para resolver respostas inválias
