@@ -96,12 +96,14 @@ while True: #while para o jogador escolher se quer jogar ou não
 
     criar_tabuleiro(tabuleiro_original) # cria o tabuleiro com tudo escondido
     tabuleiro_modificado = tabuleiro_original
-    aleatoriar_simbolos(linha1, linha2, linha3, linha4, linha5, linha6, linhas) # deixa aleatório os simbolos
+    #aleatoriar_simbolos(linha1, linha2, linha3, linha4, linha5, linha6, linhas) # deixa aleatório os simbolos
 
     while True: # while para resolver respostas inválias
       while True:
         coluna = input("Digite a coluna que você deseja (letras): ") 
         linha = input("Digite a linha que você deseja(números): ")
+        print ("Loading...")
+        time.sleep(1)
         # escolhe a coluna e linha da primeira opção
         if linha not in ("1", "2", "3", "4", "5", "6") or coluna not in ("A", "B", "C", "D", "E" ,"F", "G", "H"): # if para verificar se está nos parametros das linhas e colunas
           print ("Você digitou uma resposta inválida.")
@@ -120,10 +122,11 @@ while True: #while para o jogador escolher se quer jogar ou não
       while True:
         coluna = input("Digite a coluna que você deseja (letras): ")
         linha = input("Digite a linha que você deseja(números): ")
+        print ("Loading...")
+        time.sleep(1)
         # escolhe a coluna e linha da segunda opção
         if linha not in ("1", "2", "3", "4", "5", "6") or coluna not in ("A", "B", "C", "D", "E" ,"F", "G", "H"):
           print ("Você digitou uma resposta inválida.")
-          print ('bug')
         else:
           linha = int(linha)
           coluna, linha = linhas_colunas_indices(coluna, linha) # converte a coluna e linha para índices   
